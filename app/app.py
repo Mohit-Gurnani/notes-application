@@ -1,16 +1,16 @@
 """
-    notes-api v0.6.0 — L12 rollout target (only __version__ differs from 0.5.0).
+notes-api v0.6.0 — L12 rollout target (only __version__ differs from 0.5.0).
 
-    What changed from v0.4.0 (the student's Act B diff):
-    * GET /version — echoes the build version (APP_VERSION env overrides), so a
-        rolling update is observable (L12).
-    * GET /work?n=N — does a FIXED amount of CPU work (N million iterations) and
-        reports wall-clock ms. Fixed work (not a wall-clock deadline) is what makes
-        CPU throttling visible: under a tight cpu limit the SAME work takes longer
-        (L13 throttling, L14 HPA load source).
-    * GET /mem?mb=M&hold=S — allocates M MiB of real memory and holds it, so an
-        over-limit allocation can be OOMKilled on purpose (L13).
-    All v0.4.0 endpoints (/ /notes /healthz /ready /admin/break) are unchanged.
+What changed from v0.4.0 (the student's Act B diff):
+* GET /version — echoes the build version (APP_VERSION env overrides), so a
+    rolling update is observable (L12).
+* GET /work?n=N — does a FIXED amount of CPU work (N million iterations) and
+    reports wall-clock ms. Fixed work (not a wall-clock deadline) is what makes
+    CPU throttling visible: under a tight cpu limit the SAME work takes longer
+    (L13 throttling, L14 HPA load source).
+* GET /mem?mb=M&hold=S — allocates M MiB of real memory and holds it, so an
+    over-limit allocation can be OOMKilled on purpose (L13).
+All v0.4.0 endpoints (/ /notes /healthz /ready /admin/break) are unchanged.
 """
 
 import json
