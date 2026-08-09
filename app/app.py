@@ -1,6 +1,7 @@
 """
 notes-api v0.6.0 — L12 rollout target (only __version__ differs from 0.5.0).
 
+
 What changed from v0.4.0 (the student's Act B diff):
 * GET /version — echoes the build version (APP_VERSION env overrides), so a
     rolling update is observable (L12).
